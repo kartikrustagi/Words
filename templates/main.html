@@ -6,7 +6,7 @@
         <h1>Select what to do:</h1>
         <ol>
             {% for s in topic_list %}
-            <li><a href="/{{s}}/">{{s}}</a></li>
+            <li><a href="/{{forloop.counter}}/">{{s}}</a></li>
             {% endfor %}
         </ol>
         <!--
