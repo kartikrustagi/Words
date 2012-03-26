@@ -1,19 +1,19 @@
-%form{:action => "store-word",:method => "post"}
-  %fieldset
-    %ol
-      %li
-        %label{:for => "word"} Word:
-        %input{:type => "text", :name => "name", :class => "text"}
-        %br
-        %br
-      %li
-        %label{:for => "definition"} Definition:
-        %input{:type => "text", :name => "definition", :class => "text"}
-        %br
-        %br
-      %li
-        %label{:for => "example"} Example:
-        %textarea{:name => "example"}
-        %br
-        %br
-      %input{:type => "submit", :value => "Save", :class => "button"}
+!!!
+%html
+  %head
+    %title= "Enter Word"
+  %body
+    %form{:action => "store-word",:method => "post"}
+      Word: 
+      %input{:type => "text", :name => "name", :size => 30}
+      %br/
+      %br/
+      Definition:
+      %textarea{:type => "text", :name => "definition", :rows => 3, :columns => 300}
+      %br/
+      %br/
+      Example:
+      %textarea{:type => "text", :name => "example", :rows => 3, :columns => 300}
+      %br/
+      %br/
+      %input{:type => "submit", :value => "Save"}
