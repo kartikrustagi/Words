@@ -3,17 +3,17 @@
   %head
     %title= "Enter Word"
   %body
-    %form{:action => "store-word",:method => "post"}
-      Word: 
-      %input{:type => "text", :name => "name", :size => 30}
+    %form{:action => "store-word",:method => "POST"}
+      Word:   
+      %input{:type => "text", :name => "word", :size => 30}
       %br/
       %br/
       Definition:
-      %textarea{:type => "text", :name => "definition", :rows => 3, :columns => 300}
+      %textarea{:type => "text", :name => "definition", :rows => 6, :cols => 60}
       %br/
       %br/
-      Example:
-      %textarea{:type => "text", :name => "example", :rows => 3, :columns => 300}
+      Example: 
+      %textarea{:type => "text", :name => "example", :rows => 6, :cols => 60}
       %br/
       %br/
       %input{:type => "submit", :value => "Save"}

@@ -9,6 +9,10 @@ class Access < Sinatra::Base
 	get '/enter-word' do
 		haml :enter_word
 	end
-		
+
+	post '/store-word' do
+		Word.add_word(params)
+		redirect to('/enter-word')
+	end
 
 end
