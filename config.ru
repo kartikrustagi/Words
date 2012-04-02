@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'Haml'
+require 'haml'
 
 path = File.expand_path("../",__FILE__)
 $LOAD_PATH.unshift(".") unless $LOAD_PATH.include?(".")
