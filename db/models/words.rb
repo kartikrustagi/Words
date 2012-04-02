@@ -8,13 +8,13 @@ class Word < Sequel::Model(:words)
 	end
 
 	def self.add_word(word)
-		puts word
 		count = Word.count
 		prev_word = Word.filter(:id => count).first
 		word[:prev] = count
 		word[:id] = (count+1)
 		Word.create(word)
 		prev_word.update(:next => (count+1)) unless prev_word.nil?
+		return word[:id]
 	end
 
 	def validate
