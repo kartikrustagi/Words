@@ -1,5 +1,4 @@
-require 'sinatra/base'
-require 'Haml'
+require "bundler/setup"
 
 require_relative 'db/db_config.rb'
 require_relative 'db/models/init.rb'
