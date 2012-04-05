@@ -1,3 +1,3 @@
 require 'sequel'
 
-DB = Sequel.connect("mysql://kartik:rustagi@localhost/Words")
+DB = Sequel.connect(ENV['DATABASE_URL'])
