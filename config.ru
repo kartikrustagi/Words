@@ -1,5 +1,4 @@
-require 'sinatra/base'
-require 'Haml'
+require "bundler/setup"
 
 path = File.expand_path("../",__FILE__)
 $LOAD_PATH.unshift(".") unless $LOAD_PATH.include?(".")

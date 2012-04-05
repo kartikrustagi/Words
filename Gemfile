@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 
 gem "sinatra"
-gem "haml"
+gem "haml", :require => 'Haml'
 gem "sequel"
-gem "shotgun"
-gem "mysql"
+gem "shotgun", :group => :development
+gem "mysql", :group => :development
+gem "pg", :group => :deployment
