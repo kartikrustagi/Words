@@ -1,0 +1,3 @@
+env: heroku
+development : "mysql://kartik:rustagi@localhost/Words"
+heroku: ENV['DATABASE_URL']

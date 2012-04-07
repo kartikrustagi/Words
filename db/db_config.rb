@@ -1,3 +1,3 @@
-require 'sequel'
+db_conf = YAML::load(File.open('config/db.yaml'))
 
-DB = Sequel.connect(ENV['DATABASE_URL'])
+DB = Sequel.connect(db_conf[db_conf["env"]])
