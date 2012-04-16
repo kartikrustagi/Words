@@ -1,8 +1,8 @@
 class Access < Sinatra::Base
 
 	set :root, File.dirname('../')
-	use Rack::Session::Cookie, :expire_after => 2592000  #TODO: Get this working for Pool
-	set :session_secret, "kartik" #Else each time a random session secret will be created which will fail the cookie mechanism
+	use Rack::Session::Cookie, :secret => "kartik"  #TODO: Get this working for Pool
+	#Else each time a random session secret will be created which will fail the cookie mechanism
 	#TODO: Remove cookie on logout
 	
 	Warden::Strategies.add(:password) do
@@ -26,7 +26,7 @@ class Access < Sinatra::Base
 	
 	get '/' do
 		env['warden'].authenticate!
-		'Up!'
+		haml :welcome
 	end
 
 	get '/enter-word' do
@@ -56,6 +56,7 @@ class Access < Sinatra::Base
 	end
 
 	get '/logout/?' do
+		session[:new] = []
 		env['warden'].logout
 		redirect '/login'
 	end
