@@ -1,5 +1,6 @@
 require "bundler/setup"
-require "sinatra"
+require "sinatra/base"
+require "sinatra_warden"
 require "sequel"
 require "yaml"
 

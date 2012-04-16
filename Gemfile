@@ -6,3 +6,4 @@ gem "sequel"
 gem "shotgun", :group => :development
 gem "mysql", :group => :development
 gem "pg", :group => :deployment
+gem "sinatra_warden"
